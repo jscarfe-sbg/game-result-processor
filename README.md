@@ -10,6 +10,19 @@ The GRP (we love a 3 letter acronym at Skybet!) is a simple application which do
 
 ## 1. Running the application
 
+### Installing Docker
+
+The app is packaged as a docker image, meaning we can run it in any envrionemnt that has docker installed.
+
+See https://docs.docker.com/get-docker/ to install for your operating system.
+
+### Building and running the application
+
+First you need to build:
+`docker build . -t game-result-processor`
+
+Then you can run:
+`docker run -p 8080:8080 -it game-result-processor:latest`
 
 ## 2. Interface
 
@@ -38,9 +51,9 @@ Addresses:
 - http://0.0.0.0:8080/game-stats/{game} (e.g. http://0.0.0.0:8080/game-stats/Blackjack)
 Method: GET
 
-Example responses:
-```
+#### Example responses:
 All games
+```
 {
     "Roulette": {
         "game": "Roulette",
@@ -57,8 +70,10 @@ All games
         "totalLosses": 3
     }
 }
+```
 
 With a game specified
+```
 {
     "game": "Roulette",
     "totalStaked": 5.0,
@@ -75,9 +90,10 @@ Addresses:
 - http://0.0.0.0:8080/player-stats/{player} (e.g. http://0.0.0.0:8080/player-stats/James)
 Method: GET
 
-Example responses:
+#### Example responses:
+
+All players 
 ```
-All players
 {
     "James": {
         "user": "James",
@@ -96,8 +112,10 @@ All players
         "favouriteGame": "Roulette"
     }
 }
+```
 
 With a player specified
+```
 {
     "user": "James",
     "totalStaked": 15.5,
