@@ -3,6 +3,7 @@ val kotlin_version: String by project
 val logback_version: String by project
 
 plugins {
+    application
     kotlin("jvm") version "1.9.0"
     kotlin("plugin.serialization") version "1.9.0"
     id("io.ktor.plugin") version "2.3.2"
@@ -10,11 +11,9 @@ plugins {
 
 group = "com.skybet"
 version = "0.0.1"
-application {
-    mainClass.set("com.skybet.gameresultprocessor.ApplicationKt")
 
-    val isDevelopment: Boolean = project.ext.has("development")
-    applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
+application {
+    mainClass.set("com.skybet.gameresultprocessor.ServerKt")
 }
 
 repositories {
