@@ -29,6 +29,7 @@ Then you can run:
 ### Registering a game result
 
 Address: http://0.0.0.0:8080/result
+
 Method: POST
 
 Example request:
@@ -49,6 +50,7 @@ Example request:
 Addresses: 
 - http://0.0.0.0:8080/game-stats
 - http://0.0.0.0:8080/game-stats/{game} (e.g. http://0.0.0.0:8080/game-stats/Blackjack)
+
 Method: GET
 
 #### Example responses:
@@ -88,6 +90,7 @@ With a game specified
 Addresses:
 - http://0.0.0.0:8080/player-stats
 - http://0.0.0.0:8080/player-stats/{player} (e.g. http://0.0.0.0:8080/player-stats/James)
+
 Method: GET
 
 #### Example responses:
