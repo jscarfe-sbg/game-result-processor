@@ -12,7 +12,7 @@ The GRP (we love a 3 letter acronym at Skybet!) is a simple application which do
 
 ### Installing Docker
 
-The app is packaged as a docker image, meaning we can run it in any envrionemnt that has docker installed.
+The app is packaged as a docker image, meaning we can run it in any environment that has docker installed.
 
 See https://docs.docker.com/get-docker/ to install for your operating system.
 
